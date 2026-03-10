@@ -41,6 +41,8 @@ a {
 
 button {
   font: inherit;
+  color: inherit;
+  cursor: pointer;
 }
 
 .container {
@@ -96,6 +98,7 @@ button {
   border-radius: 999px;
   color: #fff;
   font-weight: 600;
+  border: 0;
 }
 
 .nav-toggle {
@@ -219,6 +222,12 @@ button {
   color: #fff;
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.24);
+}
+
+.footer-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
 .highlights {
@@ -400,6 +409,68 @@ tbody th {
   flex-wrap: wrap;
   gap: 1.2rem;
   align-content: flex-start;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 200;
+}
+
+.modal.is-open {
+  display: flex;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 12, 24, 0.68);
+  backdrop-filter: blur(8px);
+}
+
+.modal-panel {
+  position: relative;
+  width: min(100%, 32rem);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(11, 99, 243, 0.08);
+  color: var(--primary);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.modal-copy {
+  margin: 1rem 0 1.25rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.modal-email {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.25rem;
+  border-radius: 999px;
+  background: rgba(11, 99, 243, 0.08);
+  color: var(--primary);
+  font-weight: 800;
 }
 
 @media (max-width: 1024px) {
